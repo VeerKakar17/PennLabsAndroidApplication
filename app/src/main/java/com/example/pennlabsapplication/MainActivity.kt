@@ -108,7 +108,6 @@ fun MyScreen(
                             },
                             modifier = Modifier.align(Alignment.BottomEnd)
                         ) {
-                            // Menu items
                             DropdownMenuItem(
                                 text = { Text("Sort by Rating") },
                                 onClick = {
@@ -121,13 +120,6 @@ fun MyScreen(
                                 onClick = {
                                     expandedFilterList = false
                                     foodTruckViewModel.sortByName()
-                                }
-                            )
-                            DropdownMenuItem(
-                                text = { Text("Sort by Distance") },
-                                onClick = {
-                                    expandedFilterList = false
-//                                    foodTruckViewModel.sortByDistance()
                                 }
                             )
                         }
