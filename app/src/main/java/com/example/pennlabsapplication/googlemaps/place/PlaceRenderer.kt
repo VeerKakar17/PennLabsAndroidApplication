@@ -20,7 +20,7 @@ class PlaceRenderer(
 ) : DefaultClusterRenderer<Place>(context, map, clusterManager) {
 
 
-    private val bicycleIcon: BitmapDescriptor by lazy {
+    private val truckIcon: BitmapDescriptor by lazy {
         val height = 100
         val width = 100
         val bitmap = BitmapFactory.decodeResource(context.resources, R.drawable.foodtruck_icon)
@@ -31,7 +31,7 @@ class PlaceRenderer(
     override fun onBeforeClusterItemRendered(item: Place, markerOptions: MarkerOptions) {
         markerOptions.title(item.name)
             .position(item.latLng)
-            .icon(bicycleIcon)
+            .icon(truckIcon)
     }
 
     override fun onClusterItemRendered(clusterItem: Place, marker: Marker) {
